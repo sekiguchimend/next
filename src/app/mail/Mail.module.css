@@ -1,0 +1,26 @@
+/* Mail.module.css */
+
+.form {
+    background: linear-gradient(to bottom right, #dedddd, #f3f2f2); /* 暗い色のグラデーション */
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%; /* コンテンツの幅を調整 */
+    border-radius: 7px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    margin-bottom: 20px;
+  }
+  
+  .mail {
+    margin-bottom: 20px;
+  }
+  
+  .area {
+    width: 100%;
+  }
+  
