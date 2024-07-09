@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server';
 import nodemailer from "nodemailer";
 
 export async function POST(request) {
+    const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
+if (!serviceDomain) {
+  throw new Error('NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN is required');
+}
     try {
         const { name, email, message } = await request.json();
         console.log("Received data:", { name, email, message });
