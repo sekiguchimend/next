@@ -1,0 +1,173 @@
+.post {
+    margin-top: 30px;
+    background-color: #fff; /* 投稿内容の背景色を白色に設定 */
+    padding: 20px; /* 投稿内容の周りに余白を追加 */
+    margin-left: 150px;
+}
+
+.post h1 {
+    position: relative; /* 相対位置指定 */
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px 0 50px 10px; /* h1と投稿内容の間にマージンを追加 */
+    background-color: #f0f0f0;
+    padding: 15px 30px;
+color: #444;
+}
+.profile p {
+    width: 300px; /* 例: 幅を200pxに指定 */
+    /* その他のスタイル */
+    margin-top: 25px;
+    color: #444;
+}
+
+
+.post h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px; /* 縦線の幅 */
+    height: 100%; /* 高さ */
+    background-color: rgb(65, 65, 139); /* 青色 */
+    font-weight:bolder;
+}
+
+.post h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 50px 0 50px 50px; /* h1と投稿内容の間にマージンを追加 */
+    padding-bottom: 8px;
+    position: relative; /* 親要素の位置を基準にするために必要 */
+    text-align: left;
+    color: #444;
+
+}
+
+.post h2::before {
+    content: "\2713"; /* Unicode のチェックマーク記号 */
+    position: absolute;
+    left: -35px; /* 文字の左側に配置 */
+    top: 50%; /* 文字の中央に配置 */
+    transform: translateY(-50%); /* 垂直方向に中央揃え */
+    font-size: 35px; /* チェックマークのサイズ */
+    color: rgb(65, 65, 139); /* 青色にする */
+}
+
+.post p {
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.2px;
+    color: #444;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.post ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px; /* 上下の間隔を30pxに設定 */
+}
+.post ul {
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.2px;
+    color: #444;
+    margin: 50px 30px 50px 30px;
+    border: 2px dashed rgb(65, 65, 139); /* 点線の色と幅を指定 */
+    padding: 10px; /* 点線から内容までの間隔 */
+}
+
+.post li{
+    text-align: left;
+    margin-left: 40px;
+}
+.post img {
+    max-width: 100%; /* 最大幅を親要素に合わせる */
+    height: auto; /* アスペクト比を維持しながら幅に合わせる */
+    display: block; /* インライン要素の不要な余白を削除 */
+    margin: 0 auto; /* 横方向の中央揃え */margin-top: 50px;
+margin-bottom: 50px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* プロフィールとメインを横並びにする */
+    text-align: center;
+    justify-content: center; /* 水平方向に中央揃えを行う */
+}
+
+.profile {
+    margin-top: 30px;
+    flex: 0 0 auto;
+    margin-left: 100px;
+    margin-right: 50px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.hrContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.hr {
+    width: 50px;
+    border-color:  rgb(99, 99, 197);
+
+}
+
+.main {
+    flex: 1; /* メインコンテンツの幅を伸ばす */
+    max-width: 1000px; /* メインコンテンツの最大幅を設定 */
+    /* その他のスタイル */
+}
+
+.tate {
+    flex-direction: column; /* 要素を縦方向に配置 */
+}
+
+.matome {
+    margin-left: 100px; /* プロフィールとメインの間に間隔を追加 */
+    background-color: #fff; /* 投稿内容の背景色を白色に設定 */
+    padding: 20px; /* 投稿内容の周りに余白を追加 */
+    flex: 0 0 auto;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+
+.post h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 30px 40px; /* h1と投稿内容の間にマージンを追加 */
+    padding-bottom: 8px;
+    position: relative; /* 親要素の位置を基準にするために必要 */
+    text-align: center;
+    color: #444;
+
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 縦方向に変更 */
+    }
+    .profile, .matome {
+        margin: 20px auto; /* 上下中央揃えと余白 */
+        width: calc(100% - 20px); /* 幅を調整 */
+    }
+    .post {
+        margin: 20px auto; /* 上下中央揃えと余白 */
+        width: calc(100% - 20px); /* 幅を調整 */
+    }
+    .post h1 {
+        font-size: 24px; /* フォントサイズを調整 */
+    }
+    .post h2 {
+        font-size: 20px; /* フォントサイズを調整 */
+    }
+}

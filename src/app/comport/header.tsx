@@ -6,7 +6,7 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'about', path: '/about' },
     { name: 'Mail', path: '/mail' },
-    { name: 'Tech', path: '/tech' },
+    { name: 'blog', path: '/blog' },
     { name: 'Culture', path: '/culture' },
     { name: 'Sports', path: '/sports' },
   ];
