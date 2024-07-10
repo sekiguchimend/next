@@ -1,0 +1,62 @@
+.footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(234, 234, 234);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hr {
+  width: 80px;
+  border-color: rgb(99, 99, 197);
+  margin-bottom: 30px;
+}
+
+.h3 {
+  margin-top: 100px;
+  text-align: center;
+  color: rgb(45, 45, 45);
+}
+
+.employe,
+.pwa,
+.insta {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: rgb(100, 100, 100);
+}
+
+.hrContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* 縦方向に変更 */
+    align-items: center; /* 中央揃え */
+  }
+  .employe,
+  .pwa,
+  .insta {
+    margin: 10px 0; /* 上下の間隔を縮める */
+    padding: 0 10px; /* 左右の余白を縮める */
+  }
+  .h3 {
+    margin-top: 50px; /* タイトルの上部余白を縮める */
+  }
+  .hr {
+    margin-bottom: 10px; /* hr の下部余白を縮める */
+  }
+}

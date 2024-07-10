@@ -23,6 +23,6 @@
     }
   },
  
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/route.js", "src/app/blog/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/route.js", "src/app/blog/[id]/page.tsx"],
   "exclude": ["node_modules"]
 }

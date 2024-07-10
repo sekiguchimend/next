@@ -7,8 +7,7 @@ export default function Header() {
     { name: 'about', path: '/about' },
     { name: 'Mail', path: '/mail' },
     { name: 'blog', path: '/blog' },
-    { name: 'Culture', path: '/culture' },
-    { name: 'Sports', path: '/sports' },
+   
   ];
 
   return (

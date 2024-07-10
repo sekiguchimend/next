@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../comport/header';
 import styles from "./Mail.module.css";
-
 const TextControlsExample = () => {
     const [formData, setFormData] = useState({
         name: '',

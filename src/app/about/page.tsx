@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from './About.module.css';
 import Header from '../comport/header';
-
+import Footer from '../comport/footer';
 export default function About() {
   return (
     <>
@@ -43,6 +43,7 @@ export default function About() {
           <p>&copy; 2024 リアルタイムTVチャット</p>
         </footer>
       </div>
+      <Footer />
     </>
   );
 }

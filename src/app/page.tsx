@@ -5,6 +5,7 @@
  */
 import Link from "next/link"
 import Header from "./comport/header"
+import Footer from "./comport/footer"
 export default function Component() {
   return (
     <section className="w-full">
@@ -139,8 +140,10 @@ export default function Component() {
             </div>
           </div>
         </section>
-       
+
       </main>
+      <Footer />
+
     </section>
   )
 }
