@@ -19,17 +19,16 @@ export default function About() {
           </h1>
 
           <p className={styles.description}>
-            私たちのリアルタイムTVチャットプラットフォームでは、視聴者が好きなテレビ番組や他の視聴者とリアルタイムで交流できます。
+           telecha(テレチャ)では、視聴者が好きなテレビ番組や他の視聴者とリアルタイムで交流できます。
             スポーツの生中継、リアリティ番組、ドラマシリーズを視聴中に会話に参加して、瞬時に感想を共有しましょう
           </p>
 
           <h2 className={styles.subtitle}>特徴</h2>
           <ul className={styles.list}>
             <li>リアルタイムメッセージング</li>
-            <li>ライブTVスケジュールとの連携</li>
-            <li>ユーザープロフィールとカスタマイズ</li>
-            <li>絵文字とリアクション</li>
-            <li>安全な環境を確保するためのモデレーションツール</li>
+            <li>皆の反応記事</li>
+            <li>要望で番組追加</li>
+           
           </ul>
 
           <h2 className={styles.subtitle}>私たちの使命</h2>

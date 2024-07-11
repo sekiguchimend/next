@@ -71,21 +71,22 @@ const TextControlsExample = () => {
                     />
                 </Form.Group>
                 <Form.Group className={styles.name}>
-                    <Form.Label>Email 名前</Form.Label>
+                    <Form.Label>名前</Form.Label>
                     <Form.Control
                         id="name"
-                        placeholder="your name"
+                        placeholder="適当な名前"
                         value={formData.name}
                         onChange={handleChange}
                         required
                     />
                 </Form.Group>
                 <Form.Group className={styles.mail}>
-                    <Form.Label>Example テキストエリア</Form.Label>
+                    <Form.Label>テキストエリア</Form.Label>
                     <Form.Control
                         id="message"
                         as="textarea"
                         rows={3}
+                        placeholder="例 ）ドッキリグランプリも追加して"
                         className={styles.area}
                         value={formData.message}
                         onChange={handleChange}

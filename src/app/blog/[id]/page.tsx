@@ -79,14 +79,14 @@ const BlogId = async ({ params }: BlogIdProps) => {
         </main>
         
         <div className={styles.tate}>
-          <aside className={styles.profile}>
-            <img src="" alt="プロフィール画像" />
-            <h4>AIエンジニア</h4>
-            <div className={styles.hrContainer}>
-              <hr className={styles.hr} />
-            </div>
-            <p>AIだけで0から初学者がTwitterを作れるようになるAIスクールを運営中。</p>
-          </aside>
+        <aside className={styles.profile}>
+  <img src="/telecha.jpeg" alt="プロフィール画像" />
+  <h4>テレチャ</h4>
+  <div className={styles.hrContainer}>
+    <hr className={styles.hr} />
+  </div>
+  <p>テレビを見ながらリアルタイムチャットで皆の反応を見れるSNS</p>
+</aside>
           
           <div className={styles.matome}>
             <Link href="/" legacyBehavior>

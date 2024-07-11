@@ -1,8 +1,4 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/AfXYpLG
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+
 import Link from "next/link"
 import Header from "./comport/header"
 import Footer from "./comport/footer"
@@ -10,6 +6,7 @@ export default function Component() {
   return (
     <section className="w-full">
      <Header />
+     
       <main className="container mx-auto px-4 md:px-6 py-8">
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">リアルタイムテレビ</h2>
@@ -50,7 +47,7 @@ export default function Component() {
                 毎週月曜MCマツコデラックスの番組
               </p>
               <Link className="text-blue-500 hover:text-blue-700 mt-4" href="getu" prefetch={false}>
-               リアルタイムチャットに参加
+               リアルタイムチャットに参加する
               </Link>
             </div>
             <div>
