@@ -41,10 +41,10 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
     openGraph: {
       title: data.title,
       description: data.description,
-      url: `https://youtubernews.vercel.app/blog/${data.id}`,
+      url: `https://next-rho-rust.vercel.app/blog/${data.id}`,
       images: [
         {
-          url: `https://youtubernews.vercel.app/${data.image.url}`,
+          url: `https://next-rho-rust.vercel.app/blog/${data.image.url}`,
         },
       ],
     },
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
       card: 'summary_large_image',
       title: data.title,
       description: data.description,
-      images: [`https://youtubernews.vercel.app/${data.image.url}`],
+      images: [`https://next-rho-rust.vercel.app/blog/${data.image.url}`],
       site: '@SekiguchiS39523',
     },
   };
