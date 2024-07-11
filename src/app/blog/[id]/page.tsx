@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
       card: 'summary_large_image',
       title: data.title,
       description: data.description,
-      images: [`https://next-rho-rust.vercel.app/blog/${data.image.url}`],
+      images: [data.image.url],
       site: '@SekiguchiS39523',
     },
   };
