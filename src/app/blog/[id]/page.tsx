@@ -36,8 +36,7 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
   const data = await client.get({ endpoint: 'blog', contentId: id });
 
   return {
-    title: data.title,
-    description: data.description,
+   
     openGraph: {
       title: data.title,
       description: data.description,
