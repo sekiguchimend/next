@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,23 +49,19 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* Google AdSenseスクリプト */}
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5463240386609584"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
-
-        {/* Google Funding Choicesスクリプト */}
-        <script
+        <Script
           async
           src="https://fundingchoicesmessages.google.com/i/pub-5463240386609584?ers=1"
-          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
-
-        {/* Google Funding Choicesインラインスクリプト */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <Script id="google-funding-choices" strategy="afterInteractive">
+          {`
             (function() {
               function signalGooglefcPresent() {
                 if (!window.frames['googlefcPresent']) {
@@ -81,8 +78,8 @@ export default function RootLayout({
               }
               signalGooglefcPresent();
             })();
-          `
-        }} />
+          `}
+        </Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
