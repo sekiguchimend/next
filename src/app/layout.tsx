@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     title: "テレチャ",
     description: "テレビ見ながら皆の反応を見よう！",
     site: "@SekiguchiS39523",
+           
     images: ["https://next-rho-rust.vercel.app/telecha.jpeg"],
   },
 };
