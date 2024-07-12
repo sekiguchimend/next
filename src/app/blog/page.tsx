@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { client } from "../../lib/utils";
 import Header from "../comport/header";
-import styles from "./Home.module.css"
+import styles from "./Home.module.css";
 import Footer from "../comport/footer";
+
 interface BlogItem {
   id: string;
   title: string;
@@ -12,7 +13,14 @@ interface BlogItem {
 }
 
 async function fetchBlogData(): Promise<BlogItem[]> {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ 
+    endpoint: "blog",
+    queries: { limit: 100 }, // 必要に応じて調整
+    // キャッシュを無効化
+    customRequestInit: {
+      cache: 'no-store'
+    }
+  });
   return data.contents;
 }
 
@@ -44,3 +52,6 @@ export default async function Home() {
     </>
   );
 }
+
+// ページレベルでrevalidateを設定
+export const revalidate = 300; // 60秒ごとに再検証

@@ -93,7 +93,7 @@ const BlogId = async ({ params }: BlogIdProps) => {
           </aside>
           
           <div className={styles.matome}>
-            <Link href="/" legacyBehavior>
+            <Link href="/blog" legacyBehavior>
               <a>他の記事</a>
             </Link>
           </div>
