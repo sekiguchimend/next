@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
   const data = await client.get({ endpoint: 'blog', contentId: id });
 
   return {
-   
+    title: data.title,
+    description: data.description,
     openGraph: {
       title: data.title,
       description: data.description,
@@ -49,8 +50,7 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
     },
     twitter: {
       card: 'summary_large_image',
-      title: data.title,
-      description: data.description,
+    
       images: [data.image.url],
       site: '@SekiguchiS39523',
     },
