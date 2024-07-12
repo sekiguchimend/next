@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { client } from '../../../lib/utils';
 import styles from './Lib.module.css';
 import Link from 'next/link';
-
+import { FaTwitter } from 'react-icons/fa';
 interface BlogPost {
   id: string;
   title: string;
@@ -66,10 +66,13 @@ const BlogId = async ({ params }: BlogIdProps) => {
     return <div>Loading...</div>;
   }
 
+  
+  const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://next-rho-rust.vercel.app/blog/${id}`)}&text=${encodeURIComponent(data.title)}`;
+
   return (
     <>
       <div className={styles.container}>
-        <main className={styles.main}>               
+        <main className={styles.main}>
           <div className={styles.post}>
             <p className={styles.publishedAt}>公開日：{formatDate(data.publishedAt)}</p>
             <h3 className={styles.customTitle}>{data.title}</h3>
@@ -79,14 +82,14 @@ const BlogId = async ({ params }: BlogIdProps) => {
         </main>
         
         <div className={styles.tate}>
-        <aside className={styles.profile}>
-  <img src="/telecha.jpeg" alt="プロフィール画像" />
-  <h4>テレチャ</h4>
-  <div className={styles.hrContainer}>
-    <hr className={styles.hr} />
-  </div>
-  <p>テレビを見ながらリアルタイムチャットで皆の反応を見れるSNS</p>
-</aside>
+          <aside className={styles.profile}>
+            <img src="/telecha.jpeg" alt="プロフィール画像" />
+            <h4>テレチャ</h4>
+            <div className={styles.hrContainer}>
+              <hr className={styles.hr} />
+            </div>
+            <p>テレビを見ながらリアルタイムチャットで皆の反応を見れるSNS</p>
+          </aside>
           
           <div className={styles.matome}>
             <Link href="/" legacyBehavior>
@@ -95,6 +98,10 @@ const BlogId = async ({ params }: BlogIdProps) => {
           </div>
         </div>
       </div>
+      
+      <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className={styles.twitterIcon}>
+        <FaTwitter size={24} color="#1DA1F2" />
+      </a>
     </>
   );
 };
