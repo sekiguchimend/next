@@ -1,12 +1,43 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  // ... (既存のmetadata設定はそのまま)
+  title: "テレチャ",
+  description: "テレビ見ながら皆の反応を見よう！",
+  icons: {
+    icon: [
+      { url: "/telecha.jpeg", sizes: "any" },
+      { url: "/telecha.jpeg", type: "image/jpeg" },
+    ],
+    apple: [
+      { url: "/telecha.jpeg" },
+    ],
+  },
+  openGraph: {
+    title: "テレチャ",
+    description: "テレビ見ながら皆の反応を見よう！",
+    url: "https://next-rho-rust.vercel.app/",
+    siteName: "テレチャ",
+    images: [
+      {
+        url: "https://next-rho-rust.vercel.app/telecha.jpeg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "テレチャ",
+    description: "テレビ見ながら皆の反応を見よう！",
+    site: "@SekiguchiS39523",
+    images: ["https://next-rho-rust.vercel.app/telecha.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -17,19 +48,23 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <Script
+        {/* Google AdSenseスクリプト */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5463240386609584"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
-        <Script
+
+        {/* Google Funding Choicesスクリプト */}
+        <script
           async
           src="https://fundingchoicesmessages.google.com/i/pub-5463240386609584?ers=1"
-          strategy="afterInteractive"
+          crossOrigin="anonymous"
         />
-        <Script id="google-funding-choices" strategy="afterInteractive">
-          {`
+
+        {/* Google Funding Choicesインラインスクリプト */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
             (function() {
               function signalGooglefcPresent() {
                 if (!window.frames['googlefcPresent']) {
@@ -46,8 +81,8 @@ export default function RootLayout({
               }
               signalGooglefcPresent();
             })();
-          `}
-        </Script>
+          `
+        }} />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
