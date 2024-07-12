@@ -50,7 +50,8 @@ export async function generateMetadata({ params }: BlogIdProps): Promise<Metadat
     },
     twitter: {
       card: 'summary_large_image',
-    
+      title: data.title,
+      description: data.description,
       images: [data.image.url],
       site: '@SekiguchiS39523',
     },
