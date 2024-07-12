@@ -71,6 +71,7 @@ const BlogId = async ({ params }: BlogIdProps) => {
 
   return (
     <>
+    
       <div className={styles.container}>
         <main className={styles.main}>
           <div className={styles.post}>
